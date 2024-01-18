@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ContextTheme } from "./components/ContextTheme";
+import { BrowserRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ContextTheme>
-      <App />
+      <BrowserRouter basename="/countries-app">
+        <App />
+      </BrowserRouter>
     </ContextTheme>
   </React.StrictMode>
 );

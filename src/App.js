@@ -10,13 +10,13 @@ function App() {
   const { darkTheme } = useContext(ThemeContext);
   return (
     <div className={`app ${darkTheme ? "dark" : ""}`}>
-      <Router>
-        <Header />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/country/:name" element={<Country />} />
-        </Routes>
-      </Router>
+      {/* <Router> */}
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/country/:name" element={<Country />} />
+      </Routes>
+      {/* </Router> */}
     </div>
   );
 }
